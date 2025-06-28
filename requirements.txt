@@ -1,0 +1,4 @@
+requests
+fastapi==0.115.13
+uvicorn
+python-multipart

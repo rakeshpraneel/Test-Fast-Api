@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Form
+import uvicorn
 
 app = FastAPI()
 client_secret_return = ""
@@ -20,3 +21,7 @@ async def upload(
 @app.get("/getmethod")
 async def download():
     return client_secret_return
+
+
+if __name__ == '__main__':
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
